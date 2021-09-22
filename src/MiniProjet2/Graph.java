@@ -35,7 +35,9 @@ public class Graph {
         for(int i=0; i<graph.length; i++){
                 if (graph[i][point] == 1)
                     summits.add(i);
+
         }
         return summits;
     }
+
 }
