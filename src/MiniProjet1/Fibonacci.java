@@ -10,11 +10,11 @@ public class Fibonacci {
         int n = 10;
         Fibonacci fibonacci = new Fibonacci();
 
-        fibonacci.printMatrix( fibonacci.get(3) );
+        fibonacci.printMatrix( fibonacci.get(5) );
         //fibonacci.print();
         int[][] a ={{0,1},{1,1}}, b={{1,1},{1,2}};
-        fibonacci.printMatrix(fibonacci.matrix_merge(a,b));
-        fibonacci.printMatrix(fibonacci.matrix_merge(a,b));
+        //fibonacci.printMatrix(fibonacci.matrix_merge(a,b));
+        //fibonacci.printMatrix(fibonacci.matrix_merge(a,b));
 
         //System.out.println(recurcive(n));
         //System.out.println(iterative(n));
@@ -83,7 +83,7 @@ public class Fibonacci {
         System.out.println("======================");
         return matrix_merge(matrix, oldMatrix);
     }
-    public int[][] mergePaire(int n, int[][] matrix){
+    public int[][] mergePaire(int[][] matrix){
         return matrix_merge(matrix, matrix);
     }
 
@@ -96,14 +96,14 @@ public class Fibonacci {
             //on récupère f(n+1) par exemple pour fibonacci(3) => matrice(2) => f(n+1)
             if (n % 2 == 0) {
                 System.out.println("matrice paire=>");
-                matrix = mergePaire(n,matrix);
+                matrix = mergePaire(matrix);
                 n = n / 2;
             } else {
                 System.out.println("matrice impaire=>");
                 matrix = mergeImpaire(n,matrix);
                 System.out.println("n:"+n);
                 printMatrix(matrix);
-                n--;
+                n=0;
             }
         }
         System.out.println("result:");
