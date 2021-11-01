@@ -3,7 +3,9 @@ package MiniProjet3;
 public class Head {
     private int position;
 
-
+/*
+    L'appel au constructeur initialise la position de la tete de lecture à la position initial souhaitée.
+ */
     public Head(){
         position = Machine.Initial_Position;
     }
@@ -17,12 +19,12 @@ public class Head {
         this.position = position;
     }
 
-    public void avancer(){
-        position = position++;
+    public void advance(){
+        position = position+1;
     }
 
-    public void reculer(){
-        position = position--;
+    public void back(){
+        position = position-1;
     }
 
 }

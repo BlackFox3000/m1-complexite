@@ -5,7 +5,9 @@ public class Transition {
     private char character;
     private int move;
 
-
+/*
+    Le constructeur d'une transition prend en para
+ */
     public Transition(int state, char character, int move){
         this.state =state;
         this.character = character;
